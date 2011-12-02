@@ -1,0 +1,40 @@
+.expandme {
+    width: 100%;
+    height: 440px;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+}
+
+.expandme .expand-toggle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(30, 30, 30, 0.5) url(../img/up-down.png) no-repeat bottom right;
+    color: #fff;
+    overflow: hidden;
+}
+
+.expandme.active .expand-toggle:hover {
+    background: rgba(30, 30, 30, 0.8) url(../img/up-down.png) no-repeat top right;
+}
+
+.expandme .expand-toggle:hover {
+    background: rgba(30, 30, 30, 0.8) url(../img/up-down.png) no-repeat bottom right;
+    text-decoration: none;
+}
+
+.expandme.active .expand-toggle {
+    background: rgba(30, 30, 30, 0.5) url(../img/up-down.png) no-repeat top right;
+}
+
+.expandme .expand-toggle {
+    vertical-align: bottom;
+}
+
+.expandme .expand-toggle span {
+    padding-left: 10px;
+    line-height: 40px;
+}
