@@ -9,7 +9,7 @@
 (function ($) {
     $.fn.expandme = function (options) {
         var settings = $.extend({
-            height: null,                    // Initial height of image (usually specified in css)
+            height: null,                    // Initial height of image wrapper (usually specified in css)
             speed: 500,                      // Expansion/collapsing speed
             expandEasing: 'swing',           // Expand easing for jQuery animate
             collapseEasing: 'swing',         // Collapsing easing for jQuery animate
