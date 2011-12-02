@@ -60,6 +60,6 @@ See the ``css`` and ``img`` for stylesheet and image resources required by the p
 
 ## Demo
 
-See the ``index.html`` file in demo folder or http://en.ig.ma/projects for examples.
+See the ``index.html`` file in demo folder or [http://en.ig.ma/projects](http://en.ig.ma/projects) for examples.
 
-Read more at http://en.ig.ma/notebook/2011/jquery-expandme-plugin.
+Read more at [http://en.ig.ma/notebook/2011/jquery-expandme-plugin](http://en.ig.ma/notebook/2011/jquery-expandme-plugin).
