@@ -14,7 +14,7 @@
             expandEasing: 'swing',           // Expand easing for jQuery animate
             collapseEasing: 'swing',         // Collapsing easing for jQuery animate
             activeClass: 'active',           // Class added to expanded element
-            expandToggleClass: ['.expand-toggle','.imgr'], // Class for anchor element array that triggers expand action
+            expandToggleClass: ['.expand-toggle'], // Class for anchor element array that triggers expand action
             onBeforeExpand: null,            // Function to call before expanding
             onAfterExpand: null,             // Function to call after expanding
             onBeforeCollapse: null,          // Function to call before collapsing
