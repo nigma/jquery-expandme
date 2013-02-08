@@ -14,7 +14,7 @@
             expandEasing: 'swing',           // Expand easing for jQuery animate
             collapseEasing: 'swing',         // Collapsing easing for jQuery animate
             activeClass: 'active',           // Class added to expanded element
-            expandToggleClass: 'expand-toggle', // Class for anchor element that triggers expand action
+            expandToggleClass: ['.expand-toggle'], // Class for anchor element array that triggers expand action
             onBeforeExpand: null,            // Function to call before expanding
             onAfterExpand: null,             // Function to call after expanding
             onBeforeCollapse: null,          // Function to call before collapsing
@@ -38,12 +38,34 @@
                     target:$main,
                     height:settings.height
                 });
-                $('.' + settings.expandToggleClass, $main).toggle(
+                //calculate controllers height
+                var toggleHeight  = 0 ;
+                //looping though list of controllers
+                var controllers = '' , total = settings.expandToggleClass.length;
+                $.each(settings.expandToggleClass , function(key,val){
+                    // this is a silly if statment , made just to avoide more changes in the code
+                    if(key === total - 1){
+                        controllers += val ;
+                    }else{
+                        controllers +=val+',';
+                    }
+
+
+                    // if the controller is an image tag it will skip it
+                    // to avoide dublicating the height of the container
+                    if($(val).is('img')){
+                        return true;
+                    }else{
+                        toggleHeight + $(val).height;
+                    }
+                });
+
+                $( controllers, $main).toggle(
                         function (event) {
                             $main.addClass(settings.activeClass);
                             var $content = $main.children(settings.contentSelector);
-                            var $toggle = $main.children('.' + settings.expandToggleClass);
-                            var toggleHeight = $toggle.height() || 0;
+                            var $toggle = $main.children( controllers);
+
                             var attr = {height:$content.height() + toggleHeight};
                             if(settings.onBeforeExpand) {
                                 settings.onBeforeExpand.call($main, settings);
